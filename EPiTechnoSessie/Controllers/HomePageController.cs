@@ -1,6 +1,8 @@
 ﻿using System.Web.Mvc;
 using EPiServer.Web.Mvc;
 using EPiTechnoSessie.Models.Pages;
+using EPiTechnoSessie.Models.ViewModels;
+using EPiServer;
 
 namespace EPiTechnoSessie.Controllers
 {
@@ -8,8 +10,10 @@ namespace EPiTechnoSessie.Controllers
     {
         public ActionResult Index(HomePage currentPage)
         {
-            /* Implementation of action. You can create your own view model class that you pass to the view or
-             * you can pass the page type for simpler templates */
+            var repository = EPiServer.ServiceLocation.ServiceLocator.Current.GetInstance<IContentRepository>();
+            var model = new HomeViewModel();
+
+            repository.GetChildren<StandardPage>(currentPage.ContentLink);
 
             return View(currentPage);
         }
