@@ -1,9 +1,17 @@
 ﻿@using EPiServer.Web.Mvc.Html
+@using EPiTechnoSessie.Models.Pages
 
-@model EPiTechnoSessie.Models.Pages.HomePage
+@model EPiTechnoSessie.Models.ViewModels.HomeViewModel
 
 <div>
-    @Html.PropertyFor(m => m.MainBody)
+    @Html.PropertyFor(m => m.CurrentPage.MainBody)
     <br/>
-    @Html.PropertyFor(m => m.HomePageBlocks)
+    @Html.PropertyFor(m => m.CurrentPage.HomePageBlocks)
+    <br/>
+    <ul>
+        @foreach (StandardPage page in Model.ChildPages)
+        {
+            <li>@page.Name</li>
+        }
+    </ul>
 </div>

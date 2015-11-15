@@ -11,11 +11,10 @@ namespace EPiTechnoSessie.Controllers
         public ActionResult Index(HomePage currentPage)
         {
             var repository = EPiServer.ServiceLocation.ServiceLocator.Current.GetInstance<IContentRepository>();
-            var model = new HomeViewModel();
+            var children = repository.GetChildren<StandardPage>(currentPage.ContentLink);
+            var model = new HomeViewModel { CurrentPage = currentPage, ChildPages = children };
 
-            repository.GetChildren<StandardPage>(currentPage.ContentLink);
-
-            return View(currentPage);
+            return View(model);
         }
     }
 }
