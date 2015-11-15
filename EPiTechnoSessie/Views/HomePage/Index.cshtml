@@ -11,7 +11,7 @@
     <ul>
         @foreach (StandardPage page in Model.ChildPages)
         {
-            <li>@page.Name</li>
+            <li><a href="@Url.ContentUrl(page.ContentLink)">@page.Name</a></li>
         }
     </ul>
 </div>
