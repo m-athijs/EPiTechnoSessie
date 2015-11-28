@@ -2,16 +2,23 @@
 using EPiServer.Web.Mvc;
 using EPiTechnoSessie.Models.Pages;
 using EPiTechnoSessie.Models.ViewModels;
-using EPiServer;
+using EPiServer.ServiceLocation;
+using EPiTechnoSessie.Business.Content;
 
 namespace EPiTechnoSessie.Controllers
 {
     public class HomePageController : PageController<HomePage>
     {
+        internal IContentService _contentService;
+
+        public HomePageController(IContentService contentService)
+        {
+            _contentService = contentService;
+        }
+
         public ActionResult Index(HomePage currentPage)
         {
-            var repository = EPiServer.ServiceLocation.ServiceLocator.Current.GetInstance<IContentRepository>();
-            var children = repository.GetChildren<StandardPage>(currentPage.ContentLink);
+            var children = _contentService.GetChildren<BasePage>(currentPage.ContentLink);
             var model = new HomeViewModel { CurrentPage = currentPage, ChildPages = children };
 
             return View(model);

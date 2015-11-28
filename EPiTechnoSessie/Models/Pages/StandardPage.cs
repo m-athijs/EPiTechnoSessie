@@ -8,7 +8,7 @@ using EPiServer.SpecializedProperties;
 namespace EPiTechnoSessie.Models.Pages
 {
     [ContentType(DisplayName = "StandardPage", GUID = "16026e24-f6f4-4bbb-8fae-c30153440821", Description = "Just a standard content page")]
-    public class StandardPage : PageData
+    public class StandardPage : BasePage
     {
         [CultureSpecific]
         [Display(

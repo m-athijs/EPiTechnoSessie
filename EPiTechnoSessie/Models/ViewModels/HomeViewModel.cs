@@ -6,6 +6,6 @@ namespace EPiTechnoSessie.Models.ViewModels
     public class HomeViewModel
     {
         public HomePage CurrentPage { get; set; }
-        public IEnumerable<StandardPage> ChildPages { get; set; }
+        public IEnumerable<BasePage> ChildPages { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using EPiServer.DataAnnotations;
 namespace EPiTechnoSessie.Models.Pages
 {
     [ContentType(DisplayName = "HomePage", GUID = "0860b0e9-d9a4-46f8-a714-20eef476c195", Description = "The home page of the website")]
-    public class HomePage : PageData
+    public class HomePage : BasePage
     {
         [CultureSpecific]
         [Display(
