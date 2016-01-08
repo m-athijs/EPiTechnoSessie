@@ -96,6 +96,10 @@
       <HintPath>..\packages\EPiServer.Framework.9.3.1\lib\net45\EPiServer.Framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="EPiServer.GoogleAnalytics, Version=1.9.2.9000, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.GoogleAnalytics.1.9.2.9000\lib\EPiServer.GoogleAnalytics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EPiServer.ImageLibrary, Version=9.3.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <HintPath>..\packages\EPiServer.CMS.Core.9.3.1\lib\net45\EPiServer.ImageLibrary.dll</HintPath>
       <Private>True</Private>
@@ -144,8 +148,16 @@
       <HintPath>..\packages\EPiServer.CMS.Core.9.3.1\lib\net45\EPiServer.XForms.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Geta.SEO.Sitemaps, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Geta.SEO.Sitemaps.1.5.3\lib\net45\Geta.SEO.Sitemaps.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MenuPin, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MenuPin.3.2.0\lib\net45\MenuPin.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
@@ -268,6 +280,7 @@
     <Content Include="App_Data\EPiTechnoSessie_log.ldf">
       <DependentUpon>EPiTechnoSessie.mdf</DependentUpon>
     </Content>
+    <Content Include="ClientResources\Scripts\MenuPin\MenuPinInit.js" />
     <Content Include="Content\components\accordion.css" />
     <Content Include="Content\components\accordion.js" />
     <Content Include="Content\components\accordion.min.css" />
@@ -420,11 +433,18 @@
     <Content Include="Content\themes\basic\assets\fonts\icons.woff" />
     <Content Include="Content\themes\basic\assets\fonts\icons.ttf" />
     <Content Include="Content\themes\basic\assets\fonts\icons.eot" />
+    <Content Include="modules\Geta.SEO.Sitemaps\AdminManageSitemap.aspx" />
     <Content Include="modules\_protected\Shell\web.config" />
     <Content Include="modules\_protected\Shell\Shell.zip" />
     <Content Include="modules\_protected\CMS\web.config" />
     <Content Include="modules\_protected\CMS\CMS.zip" />
     <Content Include="App_Data\GeoLiteCity.dat" />
+    <Content Include="module.config" />
+    <Content Include="modules\_protected\EPiServer.GoogleAnalytics\web.config" />
+    <Content Include="modules\_protected\EPiServer.GoogleAnalytics\Views\Web.config" />
+    <Content Include="modules\_protected\EPiServer.GoogleAnalytics\module.config" />
+    <Content Include="modules\_protected\EPiServer.GoogleAnalytics\EPiServerGoogleAnalytics.config" />
+    <Content Include="modules\_protected\EPiServer.GoogleAnalytics\EPiServer.GoogleAnalytics.zip" />
     <None Include="Scripts\jquery-1.8.1.intellisense.js" />
     <Content Include="Content\themes\default\assets\images\flags.png" />
     <Content Include="Scripts\jquery-1.8.1.js" />
