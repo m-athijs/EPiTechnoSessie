@@ -257,6 +257,7 @@
     <Compile Include="Business\Content\IContentService.cs" />
     <Compile Include="Business\Initialization\IOC\IocContainerInitialization.cs" />
     <Compile Include="Business\Initialization\IOC\StructureMapDependencyResolver.cs" />
+    <Compile Include="Business\Tasks\DummyTask.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Controllers\StandardPageController.cs" />
     <Compile Include="Controllers\TextBlockController.cs" />
