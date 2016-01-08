@@ -17,5 +17,14 @@ namespace EPiTechnoSessie.Models.Pages
             GroupName = SystemTabNames.Content,
             Order = 1)]
         public virtual XhtmlString MainBody { get; set; }
+
+        [CultureSpecific]
+        [Display(
+            Name = "Standard Page Blocks",
+            Description = "Leef je uit met content blocks",
+            GroupName = SystemTabNames.Content,
+            Order = 2)]
+        public virtual ContentArea StandardPageBlocks { get; set; }
+
     }
 }
