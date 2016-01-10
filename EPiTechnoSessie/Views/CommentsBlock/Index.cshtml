@@ -1,0 +1,25 @@
+﻿@*@model EPiTechnoSessie.Models.ViewModels.CommentViewModel
+<div class="comment-form">
+    <h3>Reacties</h3>
+
+    @using (Ajax.BeginForm("Create", "CommentsBlock", new AjaxOptions { UpdateTargetId = "comments-table" }))
+    {
+        @Html.Hidden("blockid", Model.CurrentBlockId)
+        @Html.Hidden("pageid", Model.CurrentPageId)
+        <div class="formline">
+            <label class="comment-label" for="name">Naam</label>
+            @Html.TextBox("name", null, new { @id = "name" })
+        </div>
+        <div class="formline">
+            <label class="comment-label">&nbsp;</label>
+            @Html.TextArea("comment", null, new { @id = "comment" })
+        </div>
+        <div class="formline">
+            <input class="button" type="submit" value="Reageer" />
+        </div>
+    }
+</div>
+
+<div id="comments-table">
+    @Html.Partial("~/Views/Shared/CommentsView.cshtml", Model.CommentItems)
+</div>*@

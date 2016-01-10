@@ -1,5 +1,6 @@
 ﻿using EPiServer.Framework;
 using EPiServer.ServiceLocation;
+using EPiTechnoSessie.Business.Comments;
 using EPiTechnoSessie.Business.Content;
 using System;
 using System.Web.Http;
@@ -28,6 +29,7 @@ namespace EPiTechnoSessie.Business.Initialization.IOC
             context.Container.Configure(x =>
             {
                 x.For<IContentService>().Use<ContentService>();
+                x.For<ICommentService>().Use<CommentService>();
             });
 
             StructureMapDependencyResolver resolver = new StructureMapDependencyResolver(context.Container);

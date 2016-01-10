@@ -253,20 +253,26 @@
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
+    <Compile Include="Business\Comments\CommentItem.cs" />
+    <Compile Include="Business\Comments\CommentService.cs" />
+    <Compile Include="Business\Comments\ICommentService.cs" />
     <Compile Include="Business\Content\ContentService.cs" />
     <Compile Include="Business\Content\IContentService.cs" />
     <Compile Include="Business\Initialization\IOC\IocContainerInitialization.cs" />
     <Compile Include="Business\Initialization\IOC\StructureMapDependencyResolver.cs" />
+    <Compile Include="Controllers\Blocks\CommentsBlockController.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Controllers\StandardPageController.cs" />
     <Compile Include="Controllers\TextBlockController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Blocks\CommentsBlock.cs" />
     <Compile Include="Models\Blocks\TextBlock.cs" />
     <Compile Include="Models\Pages\BasePage.cs" />
     <Compile Include="Models\Pages\HomePage.cs" />
     <Compile Include="Models\Pages\StandardPage.cs" />
+    <Compile Include="Models\ViewModels\CommentViewModel.cs" />
     <Compile Include="Models\ViewModels\HomeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -449,6 +455,8 @@
     <Content Include="Content\themes\default\assets\images\flags.png" />
     <Content Include="Scripts\jquery-1.8.1.js" />
     <Content Include="Scripts\jquery-1.8.1.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\semantic.js" />
     <Content Include="Scripts\semantic.min.js" />
     <Content Include="Views\Web.config" />
@@ -463,6 +471,9 @@
     <Content Include="Views\Shared\Layouts\_Root.cshtml" />
     <Content Include="Views\_viewstart.cshtml" />
     <Content Include="Views\StandardPage\Index.cshtml" />
+    <Content Include="Views\CommentsBlock\Index.cshtml" />
+    <Content Include="Views\Shared\CommentsView.cshtml" />
+    <Content Include="Views\Blocks\CommentsBlock.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

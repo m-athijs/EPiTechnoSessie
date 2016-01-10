@@ -1,0 +1,12 @@
+﻿@model IEnumerable<EPiTechnoSessie.Business.Comments.CommentItem>
+
+@foreach (var item in Model)
+{
+    <div>
+        <div>
+            <strong>@item.Name - @item.CreatedAt.ToString("dd-MM-yyyy")</strong>
+            <p>@item.Comment</p>
+        </div>
+        <hr />
+    </div>
+}   

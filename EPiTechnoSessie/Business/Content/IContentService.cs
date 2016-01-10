@@ -6,6 +6,8 @@ namespace EPiTechnoSessie.Business.Content
 {
     public interface IContentService
     {
+        T Get<T>(ContentReference contentReference) where T : IContentData;
         IEnumerable<BasePage> GetChildren<T>(ContentReference contentReference) where T : BasePage;
+        PageData GetCurrentPage();
     }
 }
